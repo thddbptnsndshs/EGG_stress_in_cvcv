@@ -1,0 +1,5 @@
+# Stress in a lateral theory of phonology
+
+This class is centered around stress and the way it can be modelled in such a lateral autosegmental theory of phonology as Strict CV. Stress is commonly analysed in terms of domains and prosodic constituents such as phonological words or phrases. The highest tier in Strict CV is the syllabic tier, so appropriate ways of representing stress in phonology are harder to conceive than with the domains readily available in the theoretical toolkit.
+
+By examining different kinds of stress systems found in the world's languages under the lens of a lateral view of phonological representations, we will see that Strict CV is most powerful and insightful when applied to cases where stress correlates with syllable weight or with the occurrence of morphosyntactic boundaries, since stress, weight and boundaries share a single representation in the said theory. We will also review Strict CV Metrics, which makes use of projection and incorporation and thus achieves an extended empirical coverage of the theory by accounting for those languages where the connection between weight and stress is not straightforward.
