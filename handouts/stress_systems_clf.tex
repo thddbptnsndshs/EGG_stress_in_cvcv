@@ -1,0 +1,256 @@
+% !TEX TS-program = XeLaTeX
+
+% STYLE
+
+\documentclass[a4paper, 12pt]{article}
+\usepackage[left=3cm,
+		    right=3cm,
+    		    top=3cm,
+		    bottom=3cm,
+		    bindingoffset=0cm]{geometry}
+		    \usepackage{array}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black,
+}
+\graphicspath{ {./images/} }
+\usepackage{subfig}
+%\usepackage{enumerate}
+\usepackage[normalem]{ulem} % underlining
+\usepackage{booktabs} % tables
+\PassOptionsToPackage{table}{xcolor}% coloring tables
+\usepackage[shortlabels]{enumitem}
+\setlist[enumerate]{itemsep=-3pt}
+
+% LANGUAGE + FONT
+		    
+\usepackage[english]{babel}
+\usepackage[backend=biber,
+                     style=unified]{biblatex}
+\newcommand{\citeay}[2][]{
+   \citeauthor{#2} (\citeyear[#1]{#2})}
+\addbibresource{ref.bib}
+\usepackage{fontspec}  
+\usepackage{pifont}
+\setmainfont{Minion 3}
+
+% DRAWING
+
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{trees,arrows}
+\usetikzlibrary{positioning}
+
+% LINGUISTICS 
+
+%\usepackage{gb4e}
+\usepackage{expex}
+\usepackage[glossaries]{leipzig}
+\makeglossaries
+%\newleipzig {indef} {indef} {Indefinite}
+
+\title{What stress generally is}
+\author{Sasha Shikunova}
+\date{EGG2023, last updated \today}
+
+\begin{document}
+
+\maketitle
+
+%- What is prosody about: tone, pitch accent and stress (we focus on stress)
+%- Key properties of stress -- obligatoriness and culminativity, contrast between stress and tone as prosodic properties of strings
+%- Examples of tonal/pitch accent/free-stress/stress languages (the continuum)
+%- What stress can count -- syllables, moras and feet
+%- Two approaches to stress placement: metrical theory and primary-accent-first theory (foot structure vs assigning primary accent first)
+%- Possible reading: van der Hulst, H. (2009). Brackets and grid marks, or theories of primary accent and rhythm. Contemporary views on architecture and representations in phonological theory, 225-245.
+
+		\section{Stress is part of prosody, right?}
+		
+%	(scale drawing)
+
+	Following \textcite{hyman2006}: 
+	
+	\begin{enumerate}[$\gg$]
+		\item One end of the prosody scale is tone and the other is stress accent
+		\item There are systems in between that are not best categorised as either prototype
+		\item In-between is sometimes called \emph{pitch accent}
+	\end{enumerate}
+	
+	\pex\label{def:stress}A language with stress accent is one in which there is an indication of word-level metrical structure meeting the following two central criteria:
+		\a \textsc{obligatoriness}: every lexical word has at least one syllable marked for the highest degree of metrical prominence (primary stress);
+		\a \textsc{culminativity}: every lexical word has at most one syllable marked for the highest degree of metrical prominence. \trailingcitation{\parencite[p. 231]{hyman2006}}
+	\xe
+	Why is the `exactly one stress per word' property split into \textsc{obligatoriness} and \textsc{culminativity} in Hyman's definition?
+	
+	\ex
+		A language with tone is one in which an indication of pitch enters into the lexical realisation of at least some morphemes. \trailingcitation{\parencite[p. 1367]{hyman2001}}
+	\xe
+	
+	\begin{enumerate}[$\gg$]
+		\item Both tone and stress are properties of syllables. Why not of vowels?
+		\item Tone is featural; there may be several different tones (e.g. H/L)
+		\item Stress is prominence; can there be several different stresses?
+		\item Which one of the properties in (\ref{def:stress}) is therefore more important?
+	\end{enumerate}
+	
+	Apart from pure tone and pure stress, there is pitch accent (PA), which supposedly is in the middle. Some syllables are lexically marked with \emph{accents}, which influence pitch placement. Similarly, accents can mark prominence. How do we tell PA from stress accent (SA)?
+	
+	\begin{enumerate}[$\gg$]
+		\item If a language uses PA, the use of pitch elsewhere should be restricted
+		\item If a languages uses SA, pitch can be used elsewhere, say, for phrase-level intonation
+		\item Also, SA is phonetically different, i.e. not exponed by pitch alone (like in PA systems)
+	\end{enumerate}
+	
+	We will be primarily interested in stress.
+	
+		\section{What stress can count}
+
+	Syllables:
+		
+	\begin{enumerate}[$\gg$]
+		\item Each one has a nucleus -- usually something sonorant, like a vowel
+		\item Optionally, there is an onset or a coda
+		\item Varying syllable structures; languages can tolerate very few to almost any structure
+		\item Depending on the structure, syllables can be \emph{heavy} or \emph{light}
+	\end{enumerate}
+	
+	\pex
+		Example rule: stress the penultimate syllable (Polish)
+			\a Ag$\cdot$\textbf{niesh}$\cdot$ka
+			\a u$\cdot$ni$\cdot$wer$\cdot$si$\cdot$\textbf{te}$\cdot$tu
+	\xe
+	
+	Moras (as in Metrical stress theory, \cite{hayes1995}):
+	
+	\begin{enumerate}[$\gg$]
+		\item Less than syllables; syllables consist of 1 or 2 moras
+		\item Heavy syllables have 2 moras, light syllables have 1
+		\item Another version of the rule for Latin could be: stress the syllable containing the antepenultimate mora
+		\item Heavy syllables (closed or containing long vowels)
+	\end{enumerate}
+	
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\textbf{pa}$\cdot$pa        & Eu$\cdot$\textbf{rō}$\cdot$pa         \\
+fi$\cdot$\textbf{gū}$\cdot$ra     & per$\cdot$\textbf{sō}$\cdot$na        \\
+pan$\cdot$\textbf{thē}$\cdot$ra   & hal$\cdot$lū$\cdot$ci$\cdot$\textbf{nā}$\cdot$tus \\
+me$\cdot$\textbf{mo}$\cdot$ri$\cdot$a   & \textbf{si}$\cdot$mi$\cdot$lis        \\
+pa$\cdot$ra$\cdot$\textbf{dox}$\cdot$us & fun$\cdot$dā$\cdot$\textbf{men}$\cdot$tum   \\
+ū$\cdot$ni$\cdot$\textbf{cor}$\cdot$nis & \textbf{cal}$\cdot$ci$\cdot$trō      
+\end{tabular}
+\caption*{Latin: stress the penultimate syllable; if short, stress the antepenultimate syllable [\href{https://en.wikiversity.org/wiki/Latin/Pronunciation\_Stress}{source}]}
+\end{table}
+	
+
+	Feet:
+	
+	\begin{enumerate}[$\gg$]
+		\item Composed of 1 or 2 syllables
+		\item One metrically prominent syllable per foot
+		\item A syllable that is not in a foot cannot be stressed (is \emph{extrametrical})
+	\end{enumerate}
+	
+			\subsection{How accent placement is determined}
+			
+	There can be parametric variation wrt. foot parsing and stress assignment \parencite{hayes1980}
+	
+	\begin{enumerate}[$\gg$]
+		\item Split into feet: \emph{right-to-left/left-to-right}
+		\item Find the head syllable: \emph{left-headed/right-headed}
+		\item Find the head foot: \emph{leftmost/rightmost}
+		\item For penultimate stress there is extrametricality -- one syllable is not counted
+	\end{enumerate}
+		
+\begin{table}[]
+\centering
+\begin{tabular}{ll}
+ˌpăsaˈnɛma &  (pă$\cdot$sa)$\cdot$(\textbf{nɛ}$\cdot$ma)\\
+ˈλaraś     &  (\textbf{λa}$\cdot$raś)\\
+ˈλaraśa    &  (\textbf{λa}$\cdot$ra)$\cdot$<śa>
+\end{tabular}
+\caption*{Khanty: right-headed word structure, right-to-left left-headed feet}
+\end{table}
+				
+		\section{Primary accent vs foot structure: what comes first}
+		
+	Every word (in some languages, at least) has a primary accent. Does it make a difference, whether the primary accent or the foot structure is determined first in the computation of stress? 
+	
+	\textcite{vanderhulst2009} argues against Metrical theory, which says that feet are computed before the primary stress.
+	
+	\begin{enumerate}[$\gg$]
+		\item Rhythmic accent is secondary to the primary accent
+		\item This is controversial: what if a system exists where the order can only be the reverse?
+	\end{enumerate}
+	
+	There are, however, several reasons to believe in the primary-accent-first theory:
+	
+	\begin{enumerate}[i.]
+		\item Different criteria for assigning primary and rhythmic stress
+		\item Foot structure for primary stress from one side, rhythmic from the other -- two distinct foot types?
+		\item Different foot headedness
+		\item Primary accent can be lexically set, not so with rhythmic stress \hfill \parencite{vanderhulst2009}
+	\end{enumerate}
+	
+				\subsection{What can a primary-accent-first system generate?}
+				
+	The primary stress assignment process works via weight projection to a suprasegmental level:
+	
+	\begin{enumerate}[a.]
+		\item Project syllable weight to level 1: \emph{yes/no} 
+		\item If level one is empty -- default projection strategy: \emph{leftmost/rightmost} syllable 
+		\item Primary accent assigned to \emph{leftmost/rightmost} syllable projected to level 1 
+	\end{enumerate}
+	Heavy syllables project in weight-sensitive languages; also, projecting syllables can be diacritically marked. We already have $2 \cdot 2 \cdot 2 = 8$ options, but that is not all parametrisation available. Consider the domain settings:
+	
+	\begin{enumerate}[a.]
+		\item \emph{Bounded/unbounded domain} -- the whole word versus two edge syllables (a foot)
+		\item If bounded, \emph{leftmost/rightmost} foot
+		\item Extrametricality -- one syllable does not matter for stress assignment: \emph{yes/no}
+		\item If extrametricality: extrametrical syllable to the \emph{left/right} of the domain
+	\end{enumerate}
+	This gives us $8 \cdot 3 \cdot 3 = 72$ possible systems. Weight-sensitive systems are rather restricted, whereas if special syllables can be diacritically marked, the lexical arbitrariness makes many more systems possible.
+	
+				\subsection{What can't a primary-accent-first system generate?}
+				
+	A so-called \emph{count system}, where primary accent crucially depends on the word being fully parsed into feet: say, penultimate stress in words with $2N$ syllables and final stress in words with $2N + 1$ syllables.
+	
+	\pex A made-up count system
+		\a ka$\cdot$ga$\cdot$\textbf{gu}$\cdot$ga
+		\a u$\cdot$ga$\cdot$\textbf{ga}
+	\xe
+	The workaround: count systems may actually lack primary accent, so stress assignment only proceeds via feet parsing without placing any primary accent. How such situations may come to be, according to \textcite{vanderhulst1997}:
+	
+	\begin{enumerate}[$\gg$]
+		\item Historical change from one anchor side to the other
+		\item Fragile notion of word in polysynthetic languages: stress more like phrasal accent
+	\end{enumerate}
+	Why can't we have both `metrical' languages and primary-accent-first languages?
+	
+		\section{Summary}
+		
+	\begin{enumerate}[$\gg$]
+		\item Stress contrasts with tone and pitch accent
+		\item Primary accent can be different from rhythmic accent in important respect, that's why it makes sense to assign primary accent first
+		\item Some systems may have no primary accent whatsoever
+	\end{enumerate}
+	
+			\subsection{Next up...}
+			
+	We have located stress among prosodic phenomena and reviewed some stress assignment algorithms, but there is much more to it:
+	
+	\begin{enumerate}[$\gg$]
+		\item Phonetic and phonological exponents of stress
+		\item How exactly stress and syllable weight can interact
+		\item How stress assignment domains are formed
+	\end{enumerate}
+		
+\printbibliography
+\end{document}

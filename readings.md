@@ -1,6 +1,6 @@
 # Readings
 
-From the2 crucial to the more optional
+From the crucial to the more optional
 
 * van der Hulst, Harry. 2009. Brackets and grid marks or theories of primary accent and rhythm. In: E. Raimy and C. Cairns (eds.). Contemporary views on architecture and representations in phonological theory. MIT press, 225-245. [PDF](http://harry-van-der-hulst.uconn.edu/wp-content/uploads/sites/1733/2016/05/125-brackets-and-grids.pdf)
 * Ségéral, Philippe & Tobias Scheer. 2008. The Coda Mirror, stress and positional parameters. Lenition and Fortition, edited by J. Brandão de Carvalho, T. Scheer & Ph. Ségéral, 483-518. Berlin: Mouton de Gruyter. [PDF](http://tscheer.free.fr/papers/Segeral%20&%20Scheer%2008%20-%20The%20Coda%20Mirror,%20stress%20and%20positional%20parameters.pdf)
